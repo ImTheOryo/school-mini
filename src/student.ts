@@ -16,7 +16,6 @@ class Student extends Person {
     }
 
     addGrade(grade: number) {
-        if (grade < 0) return 0;
-        this._grades.push(grade);
+        this._grades.push(grade < 0 ? 0 : grade);
     }
 }
